@@ -1,0 +1,15 @@
+- hosts: container
+  vars:
+    build_from_source: true
+    version_from_specfile: true
+    copr_repo: fbo/dnf-master-zuul-test
+    copr_retrieve_artifacts: false
+  tasks:
+    - include_role:
+        name: copr-secret
+    - include_role:
+        name: source-to-tarball
+    - include_role:
+        name: simple-srpm-build
+    - include_role:
+        name: copr-build 
