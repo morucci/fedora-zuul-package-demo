@@ -26,4 +26,7 @@
 
 - job:
     name: dnf-copr-build
+    timeout: 5400
+    roles:
+      - zuul: zuul-distro-jobs
     run: playbooks/dnf-copr-build.yaml
