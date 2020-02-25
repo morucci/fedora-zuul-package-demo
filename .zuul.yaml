@@ -26,7 +26,7 @@
 
 - job:
     name: dnf-copr-build
-    description: Build package on the dnf-master COPR project
+    description: Build package on the dnf-master COPR project a
     timeout: 5400
     roles:
       - zuul: zuul-distro-jobs
