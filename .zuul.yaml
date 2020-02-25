@@ -1,11 +1,5 @@
 - project:
-    check:
-      jobs:
-        - noop
     promote:
-      jobs:
-        - dnf-copr-build
-    post:
       jobs:
         - dnf-copr-build
 
@@ -33,6 +27,8 @@
     secrets:
       - copr_secret
     vars:
+      base_url: https://github.com
+      reset_branch: true
       copr_repo: fbo/dnf-master-zuul-test
     run: playbooks/dnf-copr-build.yaml
     nodeset: fedora-30-vm
