@@ -6,6 +6,8 @@
   tasks:
     - include_role:
         name: copr-secret
+    - fail:
+        msg: test
 #    - include_role:
 #        name: source-to-tarball
 #    - include_role:
