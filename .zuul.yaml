@@ -5,6 +5,9 @@
     promote:
       jobs:
         - dnf-copr-build
+    post:
+      jobs:
+        - dnf-copr-build
 
 - secret:
     name: copr_secret
@@ -32,4 +35,4 @@
     vars:
       copr_repo: fbo/dnf-master-zuul-test
     run: playbooks/dnf-copr-build.yaml
-    nodeset: fedora-30-container
+    nodeset: fedora-30-vm
