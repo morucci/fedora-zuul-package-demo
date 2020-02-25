@@ -5,12 +5,12 @@
     copr_retrieve_artifacts: false
   tasks:
     - include_role:
+        name: set-origin
+    - include_role:
         name: copr-secret
-    - fail:
-        msg: test
-#    - include_role:
-#        name: source-to-tarball
-#    - include_role:
-#        name: simple-srpm-build
-#    - include_role:
-#        name: copr-build 
+    - include_role:
+        name: source-to-tarball
+    - include_role:
+        name: simple-srpm-build
+    - include_role:
+        name: copr-build 
